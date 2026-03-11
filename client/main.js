@@ -254,3 +254,18 @@ const offer=await peer.createOffer()
 await peer.setLocalDescription(offer)
 socket.emit("signal",{offer})
 }
+
+function leaveRoom(){
+
+  try{ if(channel) channel.close() }catch{}
+  try{ if(peer) peer.close() }catch{}
+
+  connected=false
+
+  document.getElementById("roomCard").style.display="none"
+  document.getElementById("roomSetup").style.display="block"
+
+  document.getElementById("recvProgressBar").style.width="0%"
+  document.getElementById("chatMessages").innerHTML=""
+  document.getElementById("incomingName").innerText=""
+}
