@@ -3,104 +3,138 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Free P2P File Sharing | Send Large Files Instantly</title>
+<title>Fast P2P File Sharing</title>
 
 <meta name="description"
-content="Send large files instantly using secure peer-to-peer WebRTC file sharing. No upload. No storage. Private transfer.">
+content="Send large files instantly using peer to peer file sharing. No upload. No storage. Secure WebRTC transfer.">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
 <h1>Fast & Private File Sharing</h1>
-<p>Send large files instantly using secure peer-to-peer technology.
-No uploads. No storage. No size limits.</p>
+<p>
+Send large files instantly using secure peer-to-peer technology.
+No uploads. No storage. No size limits.
+</p>
 <button onclick="scrollToApp()">Start Sharing</button>
 </section>
 
+<!-- FEATURES -->
 <section class="features">
-<h2>Why Use This P2P File Sharing Tool?</h2>
+<h2>Why Use This Tool?</h2>
 
 <div class="featureGrid">
 
 <div class="featureCard">
-<h3>⚡ Instant Transfers</h3>
-<p>Files move directly between devices without waiting for uploads.</p>
+<h3>⚡ Instant Transfer</h3>
+<p>Files move directly between devices.</p>
 </div>
 
 <div class="featureCard">
-<h3>🔒 Private & Secure</h3>
-<p>No files stored on servers. Encrypted WebRTC connection.</p>
+<h3>🔒 Private</h3>
+<p>No files stored on any server.</p>
 </div>
 
 <div class="featureCard">
 <h3>📱 Works Everywhere</h3>
-<p>Share between phone, laptop and desktop browsers.</p>
+<p>Mobile, tablet, laptop support.</p>
 </div>
 
 <div class="featureCard">
-<h3>📂 No File Limits</h3>
-<p>Send videos, folders, images and documents easily.</p>
+<h3>📂 No Size Limit</h3>
+<p>Send very large files easily.</p>
 </div>
 
 </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact">
 <h2>Contact & Support</h2>
-<p>Facing issues? Contact us:</p>
-<p>📧 <a href="mailto:totr140@gmail.com">totr140@gmail.com</a></p>
+<p>Facing issues? Email us:</p>
+<p>📧 <a href="mailto:tortr140@gmail.com">tortr140@gmail.com</a></p>
 </section>
 
+<!-- ADS MESSAGE -->
 <section class="supportAds">
 <h3>Support Our Free Service</h3>
-<p>This platform is free. Ads help cover server costs and improvements.
-Please consider disabling ad blocker if you like the tool.</p>
+<p>
+This platform is free. Ads help cover server costs and improvements.
+Please consider disabling ad blocker if you like the tool.
+</p>
 </section>
 
+<!-- APP -->
 <section id="appSection">
+
 <h2 style="text-align:center">P2P Share App</h2>
 
 <div id="roomSetup">
+
 <button onclick="createRoom()">Create Room</button>
+
 <input id="roomInput" placeholder="Room ID">
+
 <button onclick="joinRoom()">Join Room</button>
+
 <h3 id="roomDisplay"></h3>
+
 <canvas id="qrCanvas"></canvas>
-<p id="status"></p>
+
 </div>
 
 <div id="roomCard" style="display:none">
-<button onclick="leaveRoom()">Exit</button>
+
+<!-- CONNECTION UX -->
+<div id="connectionStatus">Connecting...</div>
+
+<button id="retryBtn"
+onclick="retryConnection()"
+style="display:none">
+Retry Connection
+</button>
+
+<div id="connectionTip"></div>
+
+<!-- FILE RECEIVE -->
 <h3 id="incomingName"></h3>
 
-<div class="progressBox"><div id="progressBar"></div></div>
-<div class="progressBox"><div id="recvProgressBar"></div></div>
+<div class="progressBox">
+<div id="recvProgressBar"></div>
+</div>
 
-<div id="speed"></div>
-<div id="eta"></div>
+<input type="file" id="fileInput">
 
-<div id="queueList"></div>
-<div id="historyBox"></div>
-<div id="previewBox"></div>
-
-<input type="file" id="fileInput" multiple>
 <button onclick="selectFiles()">Send File</button>
 
-<div id="chatBox">
+<br><br>
+
+<a id="download"></a>
+
+<!-- CHAT -->
+<h3>Chat</h3>
+
 <div id="chatMessages"></div>
-<textarea id="chatInput" placeholder="Type message"></textarea>
+
+<textarea id="chatInput"
+placeholder="Type message (Enter to send, Shift+Enter new line)">
+</textarea>
+
 <button onclick="sendChat()">Send</button>
-</div>
 
 </div>
+
 </section>
 
 <script>
 function scrollToApp(){
-document.getElementById("appSection").scrollIntoView({behavior:"smooth"})
+document.getElementById("appSection").scrollIntoView({
+behavior:"smooth"
+})
 }
 </script>
 
