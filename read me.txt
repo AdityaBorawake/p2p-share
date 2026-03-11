@@ -1,0 +1,2 @@
+cd E:\p2p-share
+node server/server.js

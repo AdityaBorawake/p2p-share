@@ -1,0 +1,17 @@
+{
+  "name": "p2p-share",
+  "version": "1.0.0",
+  "description": "Peer to peer file sharing app",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3",
+    "qrcode": "^1.5.4"
+  }
+}

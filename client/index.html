@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Free P2P File Sharing | Send Large Files Instantly</title>
+
+<meta name="description"
+content="Send large files instantly using peer to peer WebRTC file sharing. No cloud upload. No storage. Secure direct file transfer.">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Fast & Private File Sharing</h1>
+
+<p>
+Send large files instantly using secure peer-to-peer technology.
+No uploads. No storage. No size limits.
+</p>
+
+<button onclick="scrollToApp()">Start Sharing</button>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<h2>Why Use Our P2P File Transfer?</h2>
+
+<div class="featureGrid">
+
+<div class="featureCard">
+<h3>⚡ Instant Transfers</h3>
+<p>Files move directly between devices without waiting for uploads.</p>
+</div>
+
+<div class="featureCard">
+<h3>🔒 Private & Secure</h3>
+<p>No files stored on servers. Encrypted WebRTC connection.</p>
+</div>
+
+<div class="featureCard">
+<h3>📱 Works Everywhere</h3>
+<p>Share between phone, laptop, tablet or desktop browser.</p>
+</div>
+
+<div class="featureCard">
+<h3>📂 No File Limits</h3>
+<p>Send videos, folders, images and large documents easily.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+
+<section class="how">
+
+<h2>How It Works</h2>
+
+<ol>
+<li>Create a private room</li>
+<li>Share the room link or QR code</li>
+<li>Select files and transfer instantly</li>
+</ol>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Is this file sharing secure?</h3>
+<p>Yes. Files transfer directly between devices using encrypted WebRTC connections.</p>
+
+<h3>Do you store files?</h3>
+<p>No. Files are never uploaded or saved on any server.</p>
+
+<h3>Is there a file size limit?</h3>
+<p>No artificial limits. Transfer speed depends on your network.</p>
+
+<h3>Do I need to install anything?</h3>
+<p>No. Everything works directly in your browser.</p>
+
+</section>
+
+<!-- APP -->
+
+<section id="appSection">
+
+<div id="dropOverlay">Drop files to send</div>
+
+<div class="container">
+
+<h2>P2P Share App</h2>
+
+<div id="roomSetup" class="card">
+
+<button onclick="createRoom()">Create Room</button>
+
+<input id="roomInput" placeholder="Room ID">
+
+<button onclick="joinRoom()">Join Room</button>
+
+<h3 id="roomDisplay"></h3>
+
+<canvas id="qrCanvas"></canvas>
+
+<p id="status"></p>
+
+</div>
+
+<div id="roomCard" class="card" style="display:none">
+
+<div class="topBar">
+<span id="peerStatus">(offline)</span>
+<button onclick="leaveRoom()">Exit</button>
+</div>
+
+<h3 id="incomingName"></h3>
+
+<div class="progressBox">
+<div id="progressBar"></div>
+</div>
+
+<div class="progressBox">
+<div id="recvProgressBar"></div>
+</div>
+
+<div id="speed"></div>
+<div id="eta"></div>
+
+<h3>Queue</h3>
+<div id="queueList"></div>
+
+<h3>Transfer History</h3>
+<div id="historyBox"></div>
+
+<div id="previewBox"></div>
+
+<input type="file" id="fileInput" multiple>
+<button onclick="selectFiles()">Send File</button>
+<button id="cancelBtn" onclick="cancelTransfer()">Cancel</button>
+
+<div id="successAnim">✔ Transfer Complete</div>
+
+<a id="download"></a>
+
+<!-- CHAT -->
+
+<div id="chatBox">
+
+<h3>Chat</h3>
+
+<div id="chatMessages"></div>
+<div id="typingIndicator"></div>
+
+<div class="chatInputRow">
+<textarea id="chatInput"
+          placeholder="Type message"
+          rows="1"></textarea>
+<button onclick="sendChat()">Send</button>
+</div>
+
+<div class="emojiRow">
+<button onclick="sendEmoji('😀')">😀</button>
+<button onclick="sendEmoji('🔥')">🔥</button>
+<button onclick="sendEmoji('👍')">👍</button>
+<button onclick="sendEmoji('❤️')">❤️</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+function scrollToApp(){
+document.getElementById("appSection").scrollIntoView({
+behavior:"smooth"
+})
+}
+</script>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
