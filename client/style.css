@@ -1,4 +1,4 @@
-/* ===== VARIABLES ===== */
+
 :root {
   --bg: #f5f6fa;
   --surface: #ffffff;
@@ -20,7 +20,7 @@
   --font-mono: 'DM Mono', monospace;
 }
 
-/* ===== RESET ===== */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -34,7 +34,7 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 h1,h2,h3 { line-height: 1.25; }
 
-/* ===== NAV ===== */
+
 .nav {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
@@ -64,7 +64,7 @@ h1,h2,h3 { line-height: 1.25; }
 }
 .nav-link:hover { color: var(--accent); text-decoration: none; }
 
-/* ===== HERO ===== */
+
 .hero {
   background: linear-gradient(160deg, #1e40af 0%, #2563eb 50%, #3b82f6 100%);
   color: white;
@@ -123,7 +123,7 @@ h1,h2,h3 { line-height: 1.25; }
 .stat-label { font-size: 12px; opacity: 0.75; }
 .stat-div { width: 1px; background: rgba(255,255,255,0.25); height: 36px; }
 
-/* ===== BUTTONS ===== */
+
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -238,7 +238,7 @@ h1,h2,h3 { line-height: 1.25; }
 }
 .btn-send-chat:hover { background: var(--accent-dark); }
 
-/* ===== HOW IT WORKS ===== */
+
 .how {
   padding: 80px 24px;
   background: var(--surface);
@@ -297,7 +297,7 @@ h1,h2,h3 { line-height: 1.25; }
   align-self: flex-start;
 }
 
-/* ===== FEATURES ===== */
+
 .features {
   padding: 80px 24px;
   background: var(--bg);
@@ -323,7 +323,7 @@ h1,h2,h3 { line-height: 1.25; }
 .feature-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 6px; }
 .feature-card p { font-size: 14px; color: var(--text-muted); }
 
-/* ===== APP SECTION ===== */
+
 #appSection {
   padding: 80px 24px;
   background: var(--surface);
@@ -400,7 +400,7 @@ h1,h2,h3 { line-height: 1.25; }
 }
 #qrCanvas { border-radius: var(--radius-sm); display: block; margin: 0 auto 10px; }
 
-/* ===== SESSION CARD ===== */
+
 .session-topbar {
   display: flex;
   align-items: center;
@@ -495,7 +495,7 @@ h1,h2,h3 { line-height: 1.25; }
 
 .incoming-label { font-size: 15px; font-weight: 500; margin-bottom: 10px; }
 
-/* ===== CHAT ===== */
+
 .chat-section {}
 .chat-messages {
   height: 160px;
@@ -551,7 +551,7 @@ h1,h2,h3 { line-height: 1.25; }
 }
 #chatInput:focus { border-color: var(--accent); }
 
-/* ===== FAQ ===== */
+
 .faq {
   padding: 80px 24px;
   background: var(--bg);
@@ -585,7 +585,7 @@ h1,h2,h3 { line-height: 1.25; }
   padding-top: 14px;
 }
 
-/* ===== FOOTER ===== */
+
 .footer {
   background: var(--text);
   color: rgba(255,255,255,0.7);
@@ -600,7 +600,7 @@ h1,h2,h3 { line-height: 1.25; }
 .footer a { color: rgba(255,255,255,0.7); }
 .footer a:hover { color: white; }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 600px) {
   .hero { padding: 60px 20px 70px; }
   .hero-stats { padding: 16px 20px; }
