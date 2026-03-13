@@ -181,7 +181,7 @@ if(!connected) return
 const file=document.getElementById("fileInput").files[0]
 if(!file) return
 
-const chunk=64*1024
+const chunk=256*1024
 let offset=0
 
 channel.send(JSON.stringify({
