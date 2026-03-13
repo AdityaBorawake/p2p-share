@@ -9,7 +9,7 @@ let fileBuffer = []
 let fileSize = 0
 let received = 0
 
-/* ===== AUTO JOIN ===== */
+
 
 window.onload = () => {
   if (location.hash) {
@@ -25,7 +25,7 @@ function scrollToApp() {
   document.getElementById("appSection").scrollIntoView({ behavior: "smooth" })
 }
 
-/* ===== ROOM ===== */
+
 
 function createRoom() {
   const room = Math.random().toString(36).substr(2, 6)
@@ -34,7 +34,7 @@ function createRoom() {
   document.getElementById("roomDisplay").innerText = room
   document.getElementById("roomInput").value = room
 
-  // Show QR area
+  
   const qrArea = document.getElementById("qr-area")
   qrArea.style.display = "block"
   generateQR(room)
@@ -49,7 +49,7 @@ function joinRoom() {
   startPeer(false)
 }
 
-/* ===== SIGNALING ===== */
+
 
 socket.on("peer-joined", () => createOffer())
 
@@ -66,7 +66,7 @@ socket.on("signal", async data => {
   }
 })
 
-/* ===== WEBRTC ===== */
+
 
 function startPeer(isCreator) {
   peer = new RTCPeerConnection({
@@ -87,7 +87,7 @@ function startPeer(isCreator) {
   peer.onconnectionstatechange = connectionUI
 
   if (isCreator) {
-    // Use ordered:false + larger buffer for max speed
+    
     channel = peer.createDataChannel("file", {
       ordered: true,
       maxRetransmits: 30
@@ -137,11 +137,11 @@ function showRoomUI() {
   document.getElementById("roomCard").style.display = "block"
 }
 
-/* ===== DATA CHANNEL ===== */
+
 
 function setupChannel() {
   channel.binaryType = "arraybuffer"
-  // Increase buffer threshold for faster sending
+  
   channel.bufferedAmountLowThreshold = 256 * 1024
 
   channel.onmessage = e => {
@@ -152,7 +152,7 @@ function setupChannel() {
         fileBuffer = []
         received = 0
         fileSize = msg.size
-        // Show receive section
+        
         const recvSection = document.getElementById("receiveSection")
         recvSection.style.display = "block"
         document.getElementById("incomingName").innerText = "Receiving: " + msg.name
@@ -185,7 +185,7 @@ function setupChannel() {
   }
 }
 
-/* ===== DRAG & DROP ===== */
+
 
 function setupDragDrop() {
   const zone = document.getElementById("dropZone")
@@ -223,7 +223,7 @@ function formatSize(bytes) {
   return (bytes / (1024 * 1024 * 1024)).toFixed(2) + " GB"
 }
 
-/* ===== SEND FILE ===== */
+
 
 async function selectFiles() {
   if (!connected) return
@@ -231,11 +231,11 @@ async function selectFiles() {
   const file = document.getElementById("fileInput").files[0]
   if (!file) return
 
-  const CHUNK = 256 * 1024  // 256KB chunks
+  const CHUNK = 256 * 1024  // 256KB chunks after review up to 512 maybe?? ion know
   let offset = 0
   let sent = 0
 
-  // Show send progress
+
   const wrap = document.getElementById("sendProgressWrap")
   const bar = document.getElementById("sendProgressBar")
   const pct = document.getElementById("sendPercent")
@@ -252,7 +252,7 @@ async function selectFiles() {
   const reader = new FileReader()
 
   reader.onload = async e => {
-    // Wait if buffer is filling up (backpressure)
+    
     while (channel.bufferedAmount > 4 * 1024 * 1024) {
       await new Promise(r => setTimeout(r, 20))
     }
@@ -280,7 +280,7 @@ async function selectFiles() {
   readSlice(0)
 }
 
-/* ===== CHAT ===== */
+
 
 function sendChat() {
   const input = document.getElementById("chatInput")
@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 })
 
-/* ===== QR ===== */
+
 
 function generateQR(room) {
   QRCode.toCanvas(
@@ -319,7 +319,7 @@ function generateQR(room) {
   )
 }
 
-/* ===== OFFER ===== */
+
 
 async function createOffer() {
   const offer = await peer.createOffer()
@@ -327,7 +327,7 @@ async function createOffer() {
   socket.emit("signal", { offer })
 }
 
-/* ===== LEAVE ROOM ===== */
+
 
 function leaveRoom() {
   try { if (channel) channel.close() } catch {}
