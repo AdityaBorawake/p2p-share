@@ -1,153 +1,335 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Fast P2P File Sharing</title>
+<!-- PRIMARY SEO -->
+<title>BigFileSend P2P – Send Large Files Free, No Upload, No Limit</title>
+<meta name="description" content="BigFileSendP2P lets you send large files instantly, peer to peer, with no upload, no storage, and no file size limit. Free, private, and works on any device.">
+<meta name="keywords" content="p2p file sharing, peer to peer file transfer, send large files, send big files free, no upload file sharing, webrtc file transfer, p2p share, large file sender, free file transfer, send files without uploading">
+<link rel="canonical" href="https://p2p-share-u7vq.onrender.com/">
 
-<meta name="description"
-content="Send large files instantly using peer to peer file sharing. No upload. No storage. Secure WebRTC transfer.">
+<!-- OPEN GRAPH (WhatsApp, Facebook, Discord previews) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="BigFileSendP2P – Send Large Files Free, No Upload">
+<meta property="og:description" content="Transfer huge files directly between devices. No upload. No storage. No size limit. 100% private P2P sharing.">
+<meta property="og:url" content="https://p2p-share-u7vq.onrender.com/">
+<meta property="og:site_name" content="BigFileSendP2P">
 
-<meta name="google-site-verification"
-content="google6fe2dc8e7cd28859.html">
-  
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BigFileSendP2P – Send Large Files Free">
+<meta name="twitter:description" content="Peer to peer file sharing. No upload. No size limit. Works on any device.">
+
+<!-- GOOGLE VERIFICATION -->
+<meta name="google-site-verification" content="google6fe2dc8e7cd28859.html">
+
+<!-- STRUCTURED DATA (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BigFileSendP2P",
+  "url": "https://p2p-share-u7vq.onrender.com/",
+  "description": "Send large files instantly using peer-to-peer technology. No upload, no storage, no size limit.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "All",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Peer to peer file transfer",
+    "No file size limit",
+    "No upload required",
+    "End-to-end private",
+    "Works on mobile and desktop"
+  ]
+}
+</script>
+
+<!-- FAQ SCHEMA for Google rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I send a large file with BigFileSendP2P?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Create a room, share the room link or QR code with the other person, wait for them to join, then select your file and hit Send. The file transfers directly between your devices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a file size limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. BigFileSendP2P uses WebRTC peer-to-peer technology to stream files directly between devices. There is no upload to a server, so there is no size limit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my files stored anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Files are never uploaded to any server. They transfer directly from your device to the other person's device using WebRTC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on mobile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. BigFileSendP2P works on any modern browser — mobile, tablet, or desktop — with no app install needed."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-  
+
 <body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="logo">BigFileSend<span class="logo-accent">P2P</span></span>
+    <a href="mailto:tortr140@gmail.com" class="nav-link">Support</a>
+  </div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
-<h1>Fast & Private File Sharing</h1>
-<p>
-Send large files instantly using secure peer-to-peer technology.
-No uploads. No storage. No size limits.
-</p>
-<button onclick="scrollToApp()">Start Sharing</button>
+  <div class="hero-inner">
+    <div class="badge">100% Free · No Account Needed</div>
+    <h1>Send <em>any size</em> file.<br>No upload. No limits.</h1>
+    <p class="hero-sub">BigFileSendP2P transfers files directly between devices using peer-to-peer technology. Your files never touch a server.</p>
+    <button class="btn-primary" onclick="scrollToApp()">Start Sending Files →</button>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num">0s</span><span class="stat-label">Upload wait</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">∞</span><span class="stat-label">File size limit</span></div>
+      <div class="stat-div"></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Private</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="section-inner">
+    <h2>How it works</h2>
+    <p class="section-sub">Three steps. Takes less than 30 seconds.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>Create a room</h3>
+          <p>Click "Create Room" to generate a unique room. Share the link or QR code with the other person.</p>
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>They join</h3>
+          <p>The other person opens the link and joins your room. A direct peer-to-peer connection is established.</p>
+        </div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Send your file</h3>
+          <p>Drop your file or click to select it. The transfer starts instantly — no waiting for uploads.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FEATURES -->
 <section class="features">
-<h2>Why Use This Tool?</h2>
-
-<div class="featureGrid">
-
-<div class="featureCard">
-<h3>⚡ Instant Transfer</h3>
-<p>Files move directly between devices.</p>
-</div>
-
-<div class="featureCard">
-<h3>🔒 Private</h3>
-<p>No files stored on any server.</p>
-</div>
-
-<div class="featureCard">
-<h3>📱 Works Everywhere</h3>
-<p>Mobile, tablet, laptop support.</p>
-</div>
-
-<div class="featureCard">
-<h3>📂 No Size Limit</h3>
-<p>Send very large files easily.</p>
-</div>
-
-</div>
+  <div class="section-inner">
+    <h2>Why BigFileSendP2P?</h2>
+    <p class="section-sub">Built for people who need to send large files fast, without the hassle.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Full-speed transfer</h3>
+        <p>Files move at your network's maximum speed — no server bottleneck slowing things down.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>End-to-end private</h3>
+        <p>Files go directly from your device to theirs. No server ever sees your data.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📂</div>
+        <h3>No size limit</h3>
+        <p>Send a 50MB zip or a 10GB video — BigFileSendP2P handles any size file.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Works everywhere</h3>
+        <p>Any modern browser on any device. Phone to laptop, Mac to Windows — it just works.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Built-in chat</h3>
+        <p>Send messages alongside your files. No need to switch apps.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🆓</div>
+        <h3>Completely free</h3>
+        <p>No sign-up, no subscription, no cost. Just send your file.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
-<h2>Contact & Support</h2>
-<p>Facing issues? Email us:</p>
-<p>📧 <a href="mailto:tortr140@gmail.com">tortr140@gmail.com</a></p>
-</section>
-
-<!-- ADS MESSAGE -->
-<section class="supportAds">
-<h3>Support Our Free Service</h3>
-<p>
-This platform is free. Ads help cover server costs and improvements.
-Please consider disabling ad blocker if you like the tool.
-</p>
-</section>
-
-<!-- APP -->
+<!-- APP SECTION -->
 <section id="appSection">
+  <div class="app-wrapper">
+    <div class="app-header">
+      <h2>Send a file now</h2>
+      <p>Create a room or enter a room ID to join an existing one</p>
+    </div>
 
-<h2 style="text-align:center">P2P Share App</h2>
+    <!-- ROOM SETUP -->
+    <div id="roomSetup" class="app-card">
+      <div class="room-actions">
+        <button class="btn-primary" onclick="createRoom()">＋ Create Room</button>
+        <div class="divider-or"><span>or</span></div>
+        <div class="join-row">
+          <input id="roomInput" placeholder="Enter Room ID" autocomplete="off" spellcheck="false">
+          <button class="btn-secondary" onclick="joinRoom()">Join →</button>
+        </div>
+      </div>
+      <div id="qr-area" style="display:none" class="qr-area">
+        <p class="qr-label">Share this link or QR code</p>
+        <p id="roomDisplay" class="room-id-display"></p>
+        <canvas id="qrCanvas"></canvas>
+        <button class="btn-copy" onclick="copyRoomLink()">📋 Copy Link</button>
+      </div>
+    </div>
 
-<div id="roomSetup">
+    <!-- ROOM CARD (active session) -->
+    <div id="roomCard" style="display:none" class="app-card">
 
-<button onclick="createRoom()">Create Room</button>
+      <div class="session-topbar">
+        <div id="connectionStatus" class="conn-status">🔄 Connecting...</div>
+        <button id="exitBtn" class="btn-exit" onclick="leaveRoom()">✕ Exit</button>
+      </div>
 
-<input id="roomInput" placeholder="Room ID">
+      <button id="retryBtn" class="btn-retry" onclick="retryConnection()" style="display:none">↺ Retry Connection</button>
 
-<button onclick="joinRoom()">Join Room</button>
+      <!-- SEND FILE -->
+      <div class="transfer-section">
+        <h3 class="section-label">Send a file</h3>
+        <div class="drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click()">
+          <div class="drop-icon">📤</div>
+          <p class="drop-text">Drop file here or <span class="drop-link">click to select</span></p>
+          <p id="selectedFileName" class="selected-file"></p>
+        </div>
+        <input type="file" id="fileInput" style="display:none" onchange="onFileSelected()">
+        <button class="btn-primary send-btn" onclick="selectFiles()" id="sendBtn" style="display:none">Send File</button>
+        <div class="progress-wrap" id="sendProgressWrap" style="display:none">
+          <div class="progress-label">Sending... <span id="sendPercent">0%</span></div>
+          <div class="progress-track"><div id="sendProgressBar" class="progress-fill send"></div></div>
+        </div>
+      </div>
 
-<h3 id="roomDisplay"></h3>
+      <!-- RECEIVE FILE -->
+      <div class="transfer-section" id="receiveSection" style="display:none">
+        <h3 class="section-label">Incoming file</h3>
+        <p id="incomingName" class="incoming-label"></p>
+        <div class="progress-wrap">
+          <div class="progress-track"><div id="recvProgressBar" class="progress-fill recv"></div></div>
+        </div>
+        <a id="download" class="btn-download" style="display:none">⬇ Download File</a>
+      </div>
 
-<canvas id="qrCanvas"></canvas>
+      <!-- CHAT -->
+      <div class="chat-section">
+        <h3 class="section-label">Chat</h3>
+        <div id="chatMessages" class="chat-messages"></div>
+        <div class="chat-input-row">
+          <textarea id="chatInput" placeholder="Type a message (Enter to send)"></textarea>
+          <button class="btn-send-chat" onclick="sendChat()">Send</button>
+        </div>
+      </div>
 
-</div>
-
-<div id="roomCard" style="display:none">
-
-<div class="topBar">
-<button id="exitBtn" onclick="leaveRoom()">Exit Room</button>
-</div>
-  
-<!-- CONNECTION UX -->
-<div id="connectionStatus">Connecting...</div>
-
-<button id="retryBtn"
-onclick="retryConnection()"
-style="display:none">
-Retry Connection
-</button>
-
-<div id="connectionTip"></div>
-
-<!-- FILE RECEIVE -->
-<h3 id="incomingName"></h3>
-
-<div class="progressBox">
-<div id="recvProgressBar"></div>
-</div>
-
-<input type="file" id="fileInput">
-
-<button onclick="selectFiles()">Send File</button>
-
-<br><br>
-
-<a id="download"></a>
-
-<!-- CHAT -->
-<h3>Chat</h3>
-
-<div id="chatMessages"></div>
-
-<textarea id="chatInput"
-placeholder="Type message (Enter to send, Shift+Enter new line)">
-</textarea>
-
-<button onclick="sendChat()">Send</button>
-
-</div>
-
+    </div>
+  </div>
 </section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-inner">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>How do I send a large file?</summary>
+        <p>Click "Create Room", share the link with the other person, wait for them to join, then select your file and send. No upload needed — the file goes directly to their device.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is there a file size limit?</summary>
+        <p>No. Because files travel directly between devices (peer-to-peer), there is no server size restriction. You can send files of any size.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Are my files stored on a server?</summary>
+        <p>Never. Files are never uploaded to any server. The only thing our server does is help the two devices find each other. After that, the connection is direct.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does it work on mobile?</summary>
+        <p>Yes. BigFileSendP2P works on any modern browser — iPhone, Android, Mac, Windows, Linux. No app install required.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What is peer-to-peer (P2P) file sharing?</summary>
+        <p>P2P means files go directly from one device to another, without passing through a central server. This makes transfers faster, more private, and removes any file size limits.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="logo">BigFileSend<span class="logo-accent">P2P</span></span>
+    <p>Free peer-to-peer file sharing. No uploads. No limits. No sign-up.</p>
+    <p class="footer-small">Questions? <a href="mailto:tortr140@gmail.com">tortr140@gmail.com</a></p>
+    <p class="footer-small ads-note">This service is free. Ads help keep it running — please consider disabling your ad blocker.</p>
+  </div>
+</footer>
 
 <script>
 function scrollToApp(){
-document.getElementById("appSection").scrollIntoView({
-behavior:"smooth"
-})
+  document.getElementById("appSection").scrollIntoView({behavior:"smooth"})
 }
+function copyRoomLink(){
+  const room = document.getElementById("roomInput").value || currentRoom
+  if(!room) return
+  navigator.clipboard.writeText(location.origin + "/#" + room)
+  const btn = document.querySelector(".btn-copy")
+  btn.innerText = "✓ Copied!"
+  setTimeout(()=>btn.innerText="📋 Copy Link", 2000)
+}
+let currentRoom = ""
 </script>
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 <script src="main.js"></script>
-
 </body>
 </html>
