@@ -34,4 +34,9 @@ io.on("connection", socket => {
 })
 
 const PORT = process.env.PORT || 3000
-server.listen(PORT, () => console.log("Server running"))
+server.listen(PORT, () => {
+  console.log("Server running")
+  setInterval(() => {
+    fetch("https://p2p-share-u7vq.onrender.com/").catch(() => {})
+  }, 14 * 60 * 1000)
+})
