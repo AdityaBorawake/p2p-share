@@ -756,4 +756,20 @@ h1,h2,h3 { line-height: 1.25; }
   .app-card { padding: 20px; }
   .join-row { flex-direction: column; }
   .join-row .btn-secondary { width: 100%; }
+}.compare { background: var(--surface); padding: 80px 24px; }
+.compare-table-wrap { overflow-x: auto; margin-top: 32px; }
+.compare-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.compare-table th, .compare-table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border); }
+.compare-table thead tr { background: var(--surface2); }
+.compare-table th { font-weight: 600; font-size: 0.9rem; color: var(--text-muted); }
+.compare-table th.col-us { color: var(--accent); }
+.compare-table td.col-us { font-weight: 500; color: var(--text); }
+.compare-table td.winner { color: var(--green); font-weight: 600; }
+.compare-table tbody tr:hover { background: var(--surface2); }
+.explainer { background: var(--bg); padding: 80px 24px; }
+.explainer-content { max-width: 720px; margin: 32px auto 0; display: flex; flex-direction: column; gap: 20px; }
+.explainer-content p { font-size: 1rem; color: var(--text-muted); line-height: 1.8; }
+.explainer-content strong { color: var(--text); font-weight: 600; }
+@media (max-width: 600px) {
+  .compare-table th, .compare-table td { padding: 10px 12px; font-size: 0.85rem; }
 }
